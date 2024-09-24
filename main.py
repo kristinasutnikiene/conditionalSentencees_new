@@ -137,4 +137,99 @@
 # else:
 #     print("Tai nėra Python failas")
 
+# 10. Susikurkite skaičiui saugoti skirtą kintamąjį, arba reikšmę leiskite suvesti vartotojui.
+# Tikrinkite (naudojant visas if sąlygos dalis):
+# 1. Ar skaičius yra lyginis?
+# 2. Ar dalinasi iš 5?
+# 3. Ar skaičius lygus 3?
+# 4. Jeigu nieko nepavyko rasti, išveskite klaidos pranešimą.
 
+# sk = int(input("Iveskite skaicius: "))
+# if sk %2 == 0:
+#     print("lyginis")
+# elif sk %5 == 0:
+#     print("dalinasi is 5")
+# elif sk == 3:
+#     print("lygus 3")
+# else:
+#     print("false")
+
+# 11. Susikurkite tris skaičius arba leiskite visus skaičius suvesti vartotojui.
+# Tikrinkite (naudojant visas if sąlygos dalis):
+# 1. Ar pirmi du skaičiai lygūs? 2. Ar pirmas ir trečias skaičiai lygūs?
+# 3. Ar trečias skaičius didesnis už pirmą? 4. Ar antras skaičius lygus dvigubai trečio skaičiaus reikšmei?
+# 5. Ar pirmas skaičius dalinasi iš 3? 6. Jei nieko nepavyko rasti, išveskite klaidos pranešimą.
+#
+# no1 = int(input("Pirmas skaicius: "))
+# no2 = int(input("Antras skaicius: "))
+# no3 = int(input("Trecias skaicius: "))
+#
+# if no1==no2:
+#     print("1 ir 2 lygus")
+# elif no1==no3:
+#     print("1 ir 3 lygus")
+# elif no3>no1:
+#     print("3 didesnis uz 1")
+# elif no2==no3*2:
+#     print("2 lygus dvigubam 3")
+# elif no1 %3==0:
+#     print("3 dalinasi is 3")
+# elif no2==no3*2:
+#     print("2 lygus dvigubam 3")
+# else:
+#     print("nepavyko")
+
+# 12. Leiskite vartotojui suvesti tris skaičius. Suraskite kuris iš šių skaičių yra didžiausias.
+
+# no1 = int(input("Pirmas skaicius: "))
+# no2 = int(input("Antras skaicius: "))
+# no3 = int(input("Trecias skaicius: "))
+#
+# didz = max(no1,no2,no3)
+#
+# if no1==didz:
+#     print("pirmas didziausias")
+# elif no2==didz:
+#     print("antras didziausias")
+# elif no3==didz:
+#     print("trecias didziausias")
+# else:
+#     print("gavos nesamone")
+
+# 13. Leiskite vartotojui suvesti tris skaičius. Suraskite kuris iš šių skaičių yra mažiausias.
+# no1 = int(input("Pirmas skaicius: "))
+# no2 = int(input("Antras skaicius: "))
+# no3 = int(input("Trecias skaicius: "))
+#
+# maz = min(no1,no2,no3)
+#
+# if no1==maz:
+#     print("pirmas maziausias")
+# elif no2==maz:
+#     print("antras maziausias")
+# elif no3==maz:
+#     print("trecias maziausias")
+# else:
+#     print("gavos nesamone")
+
+# 14. Susikurkite trijų egzaminų rezultatų kintamuosius arba paprašykite, kad vartotojas suvestų šias reikšmes.
+# Suraskite pažymių vidurkį. Atlikite šiuos patikrinimus:
+# 1. ar gautas vidurkis yra [8-10];
+# 2. ar gautas vidurkis yra [5-8);
+# 3. ar gautas vidurkis yra < 5.
+
+rezultatas1 = int(input("Įveskite pirmo egzamino rezultatą: "))
+rezultatas2 = int(input("Įveskite antro egzamino rezultatą: "))
+rezultatas3 = int(input("Įveskite trečio egzamino rezultatą: "))
+
+vidurkis = (rezultatas1 + rezultatas2 + rezultatas3) / 3
+
+print(f"Egzaminų vidurkis: {vidurkis:.2f}")
+# {vidurkis:.2f} vidurkis suapvalinamas iki 2 sk po kablelio kaip float
+
+if 8 <= vidurkis <= 10:
+    print("Vidurkis yra tarp 8 ir 10 (įskaitant). Puikus rezultatas!")
+elif 5 <= vidurkis < 8:
+    print("Vidurkis yra tarp 5 ir 8. Vidutinis rezultatas.")
+elif vidurkis < 5:
+    print("Vidurkis yra mažesnis nei 5. Reikia pasistengti daugiau.")
