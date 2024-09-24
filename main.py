@@ -218,18 +218,38 @@
 # 2. ar gautas vidurkis yra [5-8);
 # 3. ar gautas vidurkis yra < 5.
 
-rezultatas1 = int(input("Įveskite pirmo egzamino rezultatą: "))
-rezultatas2 = int(input("Įveskite antro egzamino rezultatą: "))
-rezultatas3 = int(input("Įveskite trečio egzamino rezultatą: "))
+# rezultatas1 = int(input("Įveskite pirmo egzamino rezultatą: "))
+# rezultatas2 = int(input("Įveskite antro egzamino rezultatą: "))
+# rezultatas3 = int(input("Įveskite trečio egzamino rezultatą: "))
+#
+# vidurkis = (rezultatas1 + rezultatas2 + rezultatas3) / 3
 
-vidurkis = (rezultatas1 + rezultatas2 + rezultatas3) / 3
+# print(f"Egzaminų vidurkis: {vidurkis:.2f}")
+# # {vidurkis:.2f} vidurkis suapvalinamas iki 2 sk po kablelio kaip float
+#
+# if 8 <= vidurkis <= 10:
+#     print("Vidurkis yra tarp 8 ir 10 (įskaitant). Puikus rezultatas!")
+# elif 5 <= vidurkis < 8:
+#     print("Vidurkis yra tarp 5 ir 8. Vidutinis rezultatas.")
+# elif vidurkis < 5:
+#     print("Vidurkis yra mažesnis nei 5. Reikia pasistengti daugiau.")
 
-print(f"Egzaminų vidurkis: {vidurkis:.2f}")
-# {vidurkis:.2f} vidurkis suapvalinamas iki 2 sk po kablelio kaip float
+# 15. Susikurkite du skaičius. Patikrinkite (naudojant 4 atskirus if’us):
+# 1. ar pirmas skaičius yra didesnis už antrąjį arba yra lygus 0;
+# 2. ar antras skaičius yra didesnis už pirmąjį arba yra lygus 5;
+# 3. ar pirmas skaičius yra didesnis už antrąjį ir yra lygus 20;
+# 4. ar antras skaičius yra didesnis už pirmąjį ir yra mažesnis už 100;
 
-if 8 <= vidurkis <= 10:
-    print("Vidurkis yra tarp 8 ir 10 (įskaitant). Puikus rezultatas!")
-elif 5 <= vidurkis < 8:
-    print("Vidurkis yra tarp 5 ir 8. Vidutinis rezultatas.")
-elif vidurkis < 5:
-    print("Vidurkis yra mažesnis nei 5. Reikia pasistengti daugiau.")
+no1 = int(input("Pirmas skaicius: "))
+no2 = int(input("Antras skaicius: "))
+
+if no1>no2 or no1==0:
+    print("pirma salyga teisinga")
+if no2>no1 or no2==5:
+    print("antra salyga teisinga")
+if no1>no2 and no2==20:
+    print("trecia salyga teisinga")
+if no2>no1 and no2<100:
+    print("ketvirta salyga teisinga")
+
+
