@@ -251,5 +251,3 @@ if no1>no2 and no2==20:
     print("trecia salyga teisinga")
 if no2>no1 and no2<100:
     print("ketvirta salyga teisinga")
-
-
