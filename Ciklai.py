@@ -95,12 +95,12 @@
 # pabaiga = int(input("Įveskite rėžių pabaigą: "))
 # zingsnis = int(input("Įveskite žingsnį: "))
 # skaicius = str(input("Įveskite kokius skaičius norite matyti (lyginius ar nelyginius): "))
-#
+# isEven = skaicius == "lyginius"
 # if pradzia < pabaiga:
 #     for i in range(pradzia, pabaiga +1, zingsnis):
-#         if skaicius == "lyginius" and i % 2 == 0:
+#         if isEven  and i % 2 == 0:
 #             print (i)
-#         elif skaicius == "nelyginius" and i % 2 !=0:
+#         elif not isEven and i % 2 !=0:
 #             print (i)
 # else:
 #     print ("rėžių pradžia yra mažesnė nei pabaiga")
@@ -156,24 +156,24 @@
 # print(f'gauta suma: {suma}')
 
 # 16.Raskite visų lyginių skaičių nuo 20 iki 50 sumą.
-
-suma = 0
-
-for i in range(20, 50):
-    if i % 2 == 0:
-        suma += i
-
-print(f'lyginiu suma: {suma}')
+#
+# suma = 0
+#
+# for i in range(20, 50):
+#     if i % 2 == 0:
+#         suma += i
+#
+# print(f'lyginiu suma: {suma}')
 
 # 17.Raskite visų nelyginių skaičių nuo 30 iki 60 sumą.
 
-suma = 0
-
-for i in range(30, 60):
-    if i % 2 != 0:
-        suma += i
-
-print(f'nelyginiu suma: {suma}')
+# suma = 0
+#
+# for i in range(30, 60):
+#     if i % 2 != 0:
+#         suma += i
+#
+# print(f'nelyginiu suma: {suma}')
 
 # 18.Rasti visų skaičių, žemesnių už 1000 ir kurie dalinasi iš 3 arba 5, sumą.
 # Pavyzdys:
@@ -181,13 +181,13 @@ print(f'nelyginiu suma: {suma}')
 # Šių skaičių suma yra 23.
 # Turite gauti 233168 atsakymą.
 
-suma = 0
-
-for i in range(1, 1000):
-    if i % 3 == 0 or i % 5 == 0:
-        suma += i
-
-print(f'suma: {suma}')
+# suma = 0
+#
+# for i in range(1, 1000):
+#     if i % 3 == 0 or i % 5 == 0:
+#         suma += i
+#
+# print(f'suma: {suma}')
 
 # 19.The "Fizz-Buzz test" is an interview question designed to help filter out the
 # 99.5% of programming job candidates who can't seem to program their
@@ -199,6 +199,15 @@ print(f'suma: {suma}')
 # print “Buzz”. For numbers which are multiples of both three and five print
 # “FizzBuzz”."
 
+# for i in range(1, 101):
+#     if i % 3 == 0 and i % 5 == 0:
+#         print ('FizzBuzz')
+#     elif i % 5 == 0:
+#         print ('Buzz')
+#     elif i % 3 == 0:
+#         print ('Fizz')
+#     else:
+#         print (i)
 
 # 20.(sunkesnė) Parašyti for ciklą, kuris išvestų norimą kiekį fibonačiaus skaičių
 # į ekraną. Fibonačiaus sekoje kiekvienas skaičius yra lygus prieš jį ėjusių
@@ -210,3 +219,17 @@ print(f'suma: {suma}')
 # 3. Kiekvieno ciklo metu turite perskaičiuot trečiąjį skaičių (pirmų dviejų skaičių sudėtis),
 # tuomet pirmasis skaičius yra lygus antram, o antrasis lygus trečiam, išvesti į ekraną trečią
 # skaičių.
+
+sk1 = 1
+sk2 = 1
+
+print (sk1)
+print (sk2)
+# sk3 = sk1 + sk2
+kiekis = 9
+
+for i in range (2, kiekis):
+    sk3 = sk1 + sk2
+    sk1 = sk2
+    sk2 = sk3
+    print (sk3)

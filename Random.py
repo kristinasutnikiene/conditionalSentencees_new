@@ -10,6 +10,7 @@
 #
 # print(f'As esu {w1} {w2}. Man yra {datetime.now().year-w3} metai(u).')
 import random
+from itertools import count
 
 # 2. Sukurkite du kintamuosius ir naudodamiesi funkcija random.randint(x,x) jiems priskirkite
 # atsitiktines reikšmes nuo 0 iki 4. Didesnę reikšmę padalinkite iš mažesnės. Atspausdinkite
@@ -65,6 +66,21 @@ else:
 
 # 5. Sukurkite keturis kintamuosius ir random.randint(x,x) funkcija sugeneruokite jiems reikšmes nuo 0 iki 2.
 # Suskaičiuokite kiek yra nulių, vienetų ir dvejetų. (sprendimui masyvo nenaudoti).
+
+a = random.randint(0,2)
+b = random.randint(0,2)
+c = random.randint(0,2)
+d = random.randint(0,2)
+
+print(a)
+print(b)
+print(c)
+print(d)
+
+count0 = 0
+count1 = 1
+count2 = 2
+
 #
 # 6. Naudokite funkcija random.randint(x,x). Sukurkite ir atspausdinkite 3 skaičius nuo -10 iki 10.
 # Skaičiai mažesni už 0 turi būti  laužtiniuose skliaustuose [], 0 -  (), didesni už 0 {}.   [-4],  (0)
