@@ -331,17 +331,24 @@ import random
 # 17.Susikurkite funkciją, kuri grąžintų bet kokį jūsų norimą sakinį. Iškvieskite
 # šią funkciją ir išspausdinkite gautus rezultatus.
 
-def norimasSakinys ():
-    sak = 'Noriu miego'
-    return (sak)
-
-print (norimasSakinys())
+# def norimasSakinys ():
+#     sak = 'Noriu miego'
+#     return (sak)
+#
+# print (norimasSakinys())
 
 # 18.Susikurkite funkciją, kuri grąžintų atsitiktinai sugeneruotą skaičių.
 # Iškvieskite šią funkciją kelis kartus ir gautus atsakymus išveskite kokiu
 # norite būdu.
 
-
+# import random
+# def atsitiktiniaiSkaiciai ():
+#     return random.randint(1, 100)
+#
+# skaiciai1 = [atsitiktiniaiSkaiciai() for i in range(3)]
+# skaiciai2 = [atsitiktiniaiSkaiciai() for i in range(5)]
+# skaiciai3 = [atsitiktiniaiSkaiciai() for i in range(7)]
+# print(f'{skaiciai1} \n{skaiciai2} \n{skaiciai3}')
 
 # 19.Susikurkite funkciją, kuri per argumentus priimtų studento vardą ir
 # vidurkį. Ši funkcija turėtų sugeneruoti iš to sakinį (pvz Studentas Tomas
@@ -349,18 +356,43 @@ print (norimasSakinys())
 # porą kartų, perduodant vis skirtingus duomenis. Gautus atsakymus
 # išveskite.
 
+# def studentoVidurkis (vardas, vidurkis):
+#     return (f'Studento {vardas} vidurkis yra {vidurkis}')
+#
+# st1 = studentoVidurkis('Romo', '6.8')
+# print (st1)
+
 # 20.Susikurkite funkciją, kuri per argumentus gautų skaičių. Ji turėtų surasti
 # duoto skaičiaus mažiausią daliklį (skaičių iš kurio dalinasi be liekanos). Už
 # funkcijos ribų sukite ciklą nuo 10 iki 30 ir kiekvienoje ciklo iteracijoje
 # iškvieskite šią funkciją, perduodant ciklo kintamąjį.
 
-
+# def skBeLiekanos (skaicius):
+#     for i in range(2, skaicius + 1):
+#         if skaicius % i == 0:
+#             return i
+#
+# for sk in range (10, 31):
+#     minDaliklis = skBeLiekanos(sk)
+#     print (f'{sk} - {minDaliklis}')
 
 # 21.Susikurkite funkciją, kuri per argumentus gautų skaičių. Ji turėtų patikrinti
 # ar šis skaičius yra pirminis (grąžina True jei pirminis, ir False jei ne
 # pirminis). Už funkcijos ribų sukite ciklą nuo 2 iki 15, kiekvienoje ciklo
 # iteracijoje išveskite tikrinamą skaičių ir šalia jo iškviestos funkcijos
 # atsakymą (pvz 10 false, 11 true, ...).
+
+# def pirmSk (skaicius):
+#     if skaicius < 2:
+#         return False
+#     for i in range(2, int(skaicius ** 0.5) + 1):
+#         if skaicius % i == 0:
+#             return False
+#     return True
+#
+# for i in range (2, 15):
+#     pirminisSkaicius = pirmSk(i)
+#     print (f'{i} {pirminisSkaicius}')
 
 # 22.Susikurkite bent 3 matematines funkcijas, priimančias reikiamus
 # argumentus (pvz suma iš dviejų skaičių, suma iš trijų skaičių, skirtumas,
@@ -371,7 +403,29 @@ print (norimasSakinys())
 # kintamuosius) (pagal 23 pavyzdį). Iškvieskite šią pagrindinę funkciją bent
 # kartą.
 
-
+# def printSum(a, b):
+#     suma = a + b
+#     return suma
+#
+# def printVeiks(a, b, c):
+#     veiksmas = a ** b / c
+#     return veiksmas
+#
+# def printDal(b, c):
+#     dalyba = c / b
+#     return dalyba
+#
+# def matVeiksmai():
+#     a = random.randint(1, 10)
+#     b = random.randint(1, 10)
+#     c = random.randint(1, 10)
+#
+#     print (a, b, c)
+#     print (f'{a} + {b} = {printSum(a, b)}')
+#     print (f'{a} pakelta {b} laipsniu / {c} = {printVeiks(a, b, c):.2f}')
+#     print (f'{c} / {b} = {printDal(b, c):.2f}')
+#
+# matVeiksmai()
 
 # 23.Susikurkite funkciją kuri priimtų skaičių masyvą per argumentus. Ši
 # funkcija turėtų rasti duotųjų skaičių sumą ir grąžinti gautą atsakymą. Už
@@ -380,13 +434,34 @@ print (norimasSakinys())
 # perduodant skirtingą masyvą. Gautus atsakymus išveskite. Taip pat,
 # raskite kuri suma gavosi didesnė ir išveskite atsakymą.
 
+# import random
+#
+# def printSum(masyvas):
+#     return sum(masyvas)
+#
+# mas1 = [random.randint (1, 100) for i in range (5)]
+# print (mas1)
+# mas2 = [random.randint (1, 100) for i in range (5)]
+# print (mas2)
+#
+# print (f'Masyvo 1 suma - {printSum(mas1)} \nMasyvo 2 suma - {printSum(mas2)}')
+# print (f'Didesne suma: {max(printSum(mas1), printSum(mas2))}')
+#
+# mas1 = [random.randint (1, 100) for i in range (5)]
+# print (mas1)
+# mas2 = [random.randint (1, 100) for i in range (5)]
+# print (mas2)
+#
+# print (f'Masyvo 1 suma - {printSum(mas1)} \nMasyvo 2 suma - {printSum(mas2)}')
+# print (f'Didesne suma: {max(printSum(mas1), printSum(mas2))}')
 
 
-# 24.Susikurkite funkciją kuri per argumentus priimtų žodžių masyvą. Ji turėtų
+# 24. Susikurkite funkciją kuri per argumentus priimtų žodžių masyvą. Ji turėtų
 # rasti ir grąžinti ilgiausią žodį masyve. Už funkcijos ribų susikurkite žodžių
 # masyvą. Iškvieskite funkciją perduodant jai žodžių masyvą. Gautą
 # atsakymą išveskite, taip pat, nurodykite šio žodžio ilgį.
 
+def printMaxZod (masyvas):
 
 
 # 25.Susikurkite funkciją kuri per argumentus priimtų pažymių masyvą. Ji
